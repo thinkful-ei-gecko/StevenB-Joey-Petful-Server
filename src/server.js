@@ -1,20 +1,35 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const { Queue, peek, displayQ } = require('./Queue');
 const { cats, dogs } = require('./animalStore');
+
+const [ catQ, dogQ ] = [ new Queue(), new Queue() ];
 
 const app = express();
 app.use(cors());
 app.use(helmet());
 
-console.log(cats);
+const createCatQ = (catJson) => {
+  for (let i = 0; i < catJson.length; i++) {
+    catQ.enqueue(catJson[i]);
+  }
+  return displayQ(catQ);
+};
+
+const createDogQ = (dogJson) => {
+  for (let i = 0; i < dogJson.length; i++) {
+    dogQ.enqueue(dogJson[i]);
+  }
+  return displayQ(dogQ);
+};
 
 app.get('/api/cat/adopt', (req, res) => {
-  res.json();
+  res.json(createCatQ(cats));
 });
 
 app.get('/api/dog/adopt', (req, res) => {
-  res.json();
+  res.json(createDogQ(dogs));
 });
 
 // Catch-all 404
