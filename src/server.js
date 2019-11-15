@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const { Queue, peek, displayQ } = require('./Queue');
+const { Queue, displayQ } = require('./Queue');
 const { cats, dogs } = require('./animalStore');
 
 const [ catQ, dogQ ] = [ new Queue(), new Queue() ];
