@@ -12,8 +12,9 @@ Both endpoints support GET and DELETE requests. Data is in a Queue structure, DE
 
 ### Returned data is formatted like: 
 `[
-  
+
   {
+    
       "imageURL":
         "https://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg",
 
