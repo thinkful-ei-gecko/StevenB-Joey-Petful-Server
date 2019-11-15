@@ -5,10 +5,10 @@
 ### Endpoints
 Both endpoints support GET and DELETE requests. Data is in a Queue structure, DELETE requests will dequeue from the beginning.
 #### For dog data:
-- /api/dog/adopt
+- https://petful-stevenb-joey.herokuapp.com/api/dog/adopt
 
 #### For cat data:
-- /api/cat/adopt
+- https://petful-stevenb-joey.herokuapp.com/api/cat/adopt
 
 ### Returned data is formatted like: 
 ```
