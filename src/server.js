@@ -4,6 +4,14 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
+app.get('/api/cat/adopt', (req, res) => {
+  res.json();
+});
+
+app.get('/api/dog/adopt', (req, res) => {
+  res.json();
+});
+
 // Catch-all 404
 app.use(function (req, res, next) {
   const err = new Error('Not Found');
