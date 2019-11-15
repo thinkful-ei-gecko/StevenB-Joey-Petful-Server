@@ -47,7 +47,7 @@ const peek = (queue) => {
   return queue.first.value;
 };
 
-const display = (queue) => {
+const displayQ = (queue) => {
   let qArr = [];
   let currNode = queue.first;
 
@@ -58,6 +58,8 @@ const display = (queue) => {
 
   return qArr;
 };
+
+module.exports = { Queue, peek, displayQ };
 
 /* Test Queue DSA and functions
 
@@ -74,6 +76,6 @@ function main(arr) {
 }
 
 console.log(peek(main(testArr)));
-console.log(display(main(testArr))); 
+console.log(displayQ(main(testArr))); 
 
 */
