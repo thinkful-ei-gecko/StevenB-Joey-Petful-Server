@@ -6,6 +6,10 @@
 
 https://petful-stevenb-joey.now.sh/
 
+### Client GitHub
+
+https://github.com/thinkful-ei-gecko/StevenB-Joey-Petful-Client
+
 ### Endpoints
 Both endpoints support GET and DELETE requests. Data is in a Queue structure, DELETE requests will dequeue from the beginning.
 #### For dog data:
