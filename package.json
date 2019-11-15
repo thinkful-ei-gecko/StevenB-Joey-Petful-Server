@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "author": "Alex Cumbo",
+  "author": "Alex Cumbo, Steven Bull, Joey Romo",
   "license": "UNLICENSED",
   "main": "server.js",
   "scripts": {
