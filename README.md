@@ -11,10 +11,9 @@ Both endpoints support GET and DELETE requests. Data is in a Queue structure, DE
 - /api/cat/adopt
 
 ### Returned data is formatted like: 
-`[
-
+[
   {
-    
+
       "imageURL":
         "https://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg",
 
@@ -32,5 +31,4 @@ Both endpoints support GET and DELETE requests. Data is in a Queue structure, DE
       "story": "Owner passed away."
 
     }
-
-]`
+]
