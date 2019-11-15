@@ -1,8 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+const { cats, dogs } = require('./animalStore');
 
 const app = express();
 app.use(cors());
+app.use(helmet());
+
+console.log(cats);
 
 app.get('/api/cat/adopt', (req, res) => {
   res.json();
