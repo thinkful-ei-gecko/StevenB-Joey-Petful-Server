@@ -26,3 +26,6 @@ Both endpoints support GET and DELETE requests. Data is in a Queue structure, DE
     }
 ]
 ```
+
+### Technologies Used
+React, Express, Node
