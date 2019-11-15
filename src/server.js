@@ -32,6 +32,16 @@ app.get('/api/dog/adopt', (req, res) => {
   res.json(createDogQ(dogs));
 });
 
+app.delete('/api/cat/adopt', (req, res) => {
+  catQ.dequeue();
+  res.status(204).end();
+});
+
+app.delete('/api/dog/adopt', (req, res) => {
+  dogQ.dequeue();
+  res.status(204).end();
+});
+
 // Catch-all 404
 app.use(function (req, res, next) {
   const err = new Error('Not Found');
