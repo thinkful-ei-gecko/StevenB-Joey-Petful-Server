@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const { PORT } = require('./config');
+
 const { Queue, displayQ } = require('./Queue');
 const { cats, dogs } = require('./animalStore');
-
 const [ catQ, dogQ ] = [ new Queue(), new Queue() ];
 
 const app = express();
@@ -59,6 +60,4 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.listen(8080,()=>{
-  console.log('Serving on 8080');
-});
+app.listen(PORT);
