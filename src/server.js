@@ -15,22 +15,25 @@ const createCatQ = (catJson) => {
   for (let i = 0; i < catJson.length; i++) {
     catQ.enqueue(catJson[i]);
   }
-  return displayQ(catQ);
+  return catQ;
 };
 
 const createDogQ = (dogJson) => {
   for (let i = 0; i < dogJson.length; i++) {
     dogQ.enqueue(dogJson[i]);
   }
-  return displayQ(dogQ);
+  return dogQ;
 };
 
+createCatQ(cats);
+createDogQ(dogs);
+
 app.get('/api/cat/adopt', (req, res) => {
-  res.json(createCatQ(cats));
+  res.json(displayQ(catQ));
 });
 
 app.get('/api/dog/adopt', (req, res) => {
-  res.json(createDogQ(dogs));
+  res.json(displayQ(dogQ));
 });
 
 app.delete('/api/cat/adopt', (req, res) => {
